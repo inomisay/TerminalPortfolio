@@ -2,7 +2,7 @@
 
 A premium, interactive personal portfolio that lives entirely inside an SSH session. Built with Node.js and the `blessed` library for a high-fidelity terminal user experience.
 
-![Terminal Portfolio Mockup](./assets/mockup.png)
+![Terminal Portfolio Preview](./assets/preview.png)
 
 ## ✮ Features
 
