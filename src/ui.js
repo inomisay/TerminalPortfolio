@@ -566,7 +566,7 @@ async function createUI(stream, ptyInfo) {
     },
 
     async convert(args) {
-      const CHARSETS = ['block', 'dense', 'fade'];
+      const CHARSETS = ['block', 'dense', 'fade', 'punct', 'detailed'];
       let charset = 'dense';
       const pathTokens = [];
 
@@ -590,7 +590,7 @@ async function createUI(stream, ptyInfo) {
 
       if (!fs.existsSync(imgPath)) {
         tlog(`{red-fg}✗ file not found: ${esc(imgPath)}{/}`);
-        tlog(`{${C.muted}-fg}usage: convert <path> [block|dense|fade]{/}`);
+        tlog(`{${C.muted}-fg}usage: convert <path> [block|dense|fade|punct|detailed]{/}`);
         tlog(`{${C.muted}-fg}       convert ~/photo.jpg dense{/}`);
         return;
       }
