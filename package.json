@@ -1,0 +1,18 @@
+{
+  "name": "terminal-website",
+  "version": "1.0.0",
+  "description": "Personal website inside a terminal",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "keygen": "node scripts/generate-keys.js",
+    "convert": "node config/converter.js"
+  },
+  "dependencies": {
+    "blessed": "^0.1.81",
+    "figlet": "^1.8.0",
+    "jimp": "^0.22.12",
+    "ssh2": "^1.16.0"
+  }
+}

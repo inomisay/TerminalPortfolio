@@ -1,0 +1,8 @@
+keys/
+node_modules/
+assets/photo.jpg
+*.log
+.env
+
+assets/profilePic.jpg
+
