@@ -51,6 +51,10 @@ Customize your name, bio, and links in `config/settings.js`. You can change:
 - `work` & `projects` timeline
 - `figletFont` (Choose from several built-in fonts)
 
+## Deployment
+
+See [DEPLOYMENT.md](./DEPLOYMENT.md) for terminal-style public deployment notes, including the no-pay-for-now option.
+
 ## 📷 ASCII Converter
 
 To convert your own photo to ASCII blocks:
