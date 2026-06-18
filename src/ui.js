@@ -43,7 +43,7 @@ function makeFiglet(text, font) {
 }
 
 function tabBarContent(active) {
-  const tabs = ['home', 'about', 'work', 'projects', 'contact'];
+  const tabs = ['home', 'about', 'work', 'projects', 'publications', 'contact'];
   const items = tabs.map(t => {
     if (t === active) return `{${C.accent}-fg}{bold}[ ${t.toUpperCase()} ]{/}`; // Accent active tab
     return `{${C.dim}-fg}  ${t}  {/}`;
@@ -415,6 +415,39 @@ async function createUI(stream, ptyInfo) {
   }
   projectsPane.setContent(projContent.join('\n'));
 
+  // ── Publications pane ─────────────────────────────────
+  const publicationsPane = blessed.box({
+    parent: contentArea,
+    top: 0, left: 0, width: '100%', height: '100%',
+    hidden: true,
+    scrollable: true,
+    alwaysScroll: true,
+    keys: true,
+    vi: true,
+    tags: true,
+    scrollbar: { ch: '▌', style: { fg: C.dim } },
+    style: { bg: C.bg },
+  });
+
+  const pubContent = [
+    `\n  {${C.accent}-fg}// Publications & manuscripts...{/}\n`,
+  ];
+
+  if (Array.isArray(CONFIG.publications) && CONFIG.publications.length) {
+    CONFIG.publications.forEach((p) => {
+      const status = p.duration ?? p.year ?? '';
+      pubContent.push(
+        `  {${C.accent}-fg}✧{/}  {${C.text}-fg}{bold}${esc(p.name)}{/}`,
+        `      {${C.dim}-fg}${esc(status)}{/}`,
+        `      {${C.blue}-fg}[ ${esc(p.tech)} ]{/}`,
+        `      {${C.muted}-fg}${esc(p.desc)}{/}\n`
+      );
+    });
+  } else {
+    pubContent.push(`  {${C.dim}-fg}// No publications listed...{/}`);
+  }
+  publicationsPane.setContent(pubContent.join('\n'));
+
   // ── Terminal pane ─────────────────────────────────────
   const termPane = blessed.box({
     parent: contentArea,
@@ -466,11 +499,12 @@ async function createUI(stream, ptyInfo) {
     contactPane.hidden  = name !== 'contact';
     workPane.hidden     = name !== 'work';
     projectsPane.hidden = name !== 'projects';
+    publicationsPane.hidden = name !== 'publications';
     termPane.hidden     = name !== 'terminal';
   }
 
   function switchTab(name) {
-    if (!['home', 'about', 'contact', 'work', 'projects'].includes(name)) return;
+    if (!['home', 'about', 'contact', 'work', 'projects', 'publications'].includes(name)) return;
     termMode   = false;
     currentTab = name;
     showPane(name);
@@ -499,6 +533,7 @@ async function createUI(stream, ptyInfo) {
         ['contact', 'show contact section'],
         ['work',    'show work section'],
         ['projects','show projects section'],
+        ['publications','show publications section'],
         ['whoami',  'print name & title'],
         ['ls',      'list sections'],
         ['pwd',     'print working path'],
@@ -523,7 +558,7 @@ async function createUI(stream, ptyInfo) {
       tlog(CONFIG.location);
     },
 
-    ls() { tlog('home/  about/  contact/  work/  projects/'); },
+    ls() { tlog('home/  about/  contact/  work/  projects/  publications/'); },
 
     pwd() { tlog(`/home/${CONFIG.handle}`); },
 
@@ -625,6 +660,7 @@ async function createUI(stream, ptyInfo) {
         `  {${C.muted}-fg}links   {/} ${CONFIG.links.length} configured`,
         `  {${C.muted}-fg}work    {/} ${CONFIG.work.length} listed`,
         `  {${C.muted}-fg}projects{/} ${Array.isArray(CONFIG.projects) ? CONFIG.projects.length : 0} listed`,
+        `  {${C.muted}-fg}papers  {/} ${Array.isArray(CONFIG.publications) ? CONFIG.publications.length : 0} listed`,
         `  {${C.muted}-fg}shell   {/} bash`,
         `  {${C.muted}-fg}theme   {/} terminal-dark`,
         `  {${C.muted}-fg}font    {/} JetBrains Mono`,
@@ -670,7 +706,7 @@ async function createUI(stream, ptyInfo) {
     const cmd   = parts[0].toLowerCase();
     const args  = parts.slice(1);
 
-    if (['home', 'about', 'contact', 'work', 'projects'].includes(cmd)) {
+    if (['home', 'about', 'contact', 'work', 'projects', 'publications'].includes(cmd)) {
       switchTab(cmd);
       return;
     }
@@ -758,6 +794,7 @@ async function createUI(stream, ptyInfo) {
         currentTab === 'contact' ? contactPane :
         currentTab === 'work' ? workPane :
         currentTab === 'projects' ? projectsPane :
+        currentTab === 'publications' ? publicationsPane :
         null;
       if (pane) {
         const delta =
@@ -773,7 +810,7 @@ async function createUI(stream, ptyInfo) {
 
     // Tab key cycles sections
     if (key.name === 'tab' && !termMode) {
-      const tabs = ['home', 'about', 'contact', 'work', 'projects'];
+      const tabs = ['home', 'about', 'contact', 'work', 'projects', 'publications'];
       switchTab(tabs[(tabs.indexOf(currentTab) + 1) % tabs.length]);
       return;
     }

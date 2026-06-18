@@ -24,6 +24,8 @@ const CONFIG = {
     { label: 'github', value: 'github.com/inomisay', url: 'https://github.com/inomisay' },
     { label: 'email', value: 'jmvshp@gmail.com', url: 'mailto:jmvshp@gmail.com' },
     { label: 'linkedin', value: 'in/yasamin-valishariatpanahi', url: 'https://linkedin.com/in/yasamin-valishariatpanahi' },
+    { label: 'website', value: 'inomisay.vercel.app', url: 'https://inomisay.vercel.app/' },
+    { label: 'orcid', value: '0009-0009-6408-8711', url: 'https://orcid.org/0009-0009-6408-8711' },
   ],
 
   work: [
@@ -59,11 +61,18 @@ const CONFIG = {
 
   projects: [
     {
+      name: 'Budget Buddy',
+      duration: '05/2026',
+      year: '2026',
+      tech: 'Personal Finance App · Budgeting',
+      desc: 'Completed personal finance planner for budgeting and expense tracking; maintained as features and data needs evolve.',
+    },
+    {
       name: 'Personal Portfolio Website',
-      duration: '07/2023 - Present',
+      duration: '07/2023 - 06/2026',
       year: '2023',
       tech: 'Full-Stack Web App',
-      desc: 'Personal portfolio website (ongoing).',
+      desc: 'Completed personal portfolio website; maintained and refreshed as projects, publications, and profile details change.',
     },
     {
       name: 'Library Management System (LMS)',
@@ -81,24 +90,24 @@ const CONFIG = {
     },
     {
       name: 'APTility Pro',
-      duration: '09/2024 - Present',
+      duration: '09/2024 - 05/2026',
       year: '2024',
       tech: 'Full-Stack · Utility Billing',
-      desc: 'Apartment utility billing and management system.',
+      desc: 'Completed apartment utility billing and management system; maintained as billing flows and apartment needs change.',
     },
     {
       name: 'NephroCareAI',
-      duration: '02/2025 - Present',
+      duration: '02/2025 - 06/2026',
       year: '2025',
       tech: 'ML · Clinical Decision Support',
-      desc: 'AI-based kidney disease decision support system.',
+      desc: 'Completed AI-based kidney disease decision support system; maintained with model, interface, and research updates.',
     },
     {
       name: 'CampusMate',
-      duration: '09/2025 - Present',
+      duration: '09/2025 - 06/2026',
       year: '2025',
       tech: 'LLM · AI Assistant',
-      desc: 'AI-powered student assistant project (ongoing).',
+      desc: 'AI-powered student assistant project.',
     },
     {
       name: 'AlzheimerDx',
@@ -113,6 +122,30 @@ const CONFIG = {
       year: '2025',
       tech: 'LLM · Decision Support',
       desc: 'LLM-based decision support system for disaster response.',
+    },
+  ],
+
+  publications: [
+    {
+      name: 'Hydroponic OPTICS',
+      duration: 'Under Revision',
+      year: '2026',
+      tech: 'Research Paper',
+      desc: 'Research on automated hydroponic monitoring, control, and system optimization.',
+    },
+    {
+      name: 'Prompt Injection in LLM Agents',
+      duration: 'Manuscript in Preparation',
+      year: '2026',
+      tech: 'Security Research',
+      desc: 'Analysis of prompt injection risks and defense strategies for LLM-powered systems.',
+    },
+    {
+      name: 'NephroCareAI for Renal Risk Prediction',
+      duration: 'Manuscript in Preparation',
+      year: '2026',
+      tech: 'Medical AI',
+      desc: 'Clinical decision-support manuscript focused on kidney disease prediction and interpretation.',
     },
   ],
 };
