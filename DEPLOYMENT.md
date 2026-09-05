@@ -54,3 +54,5 @@ If you want a no-cost public demo later, possible paths are:
 - Keep this SSH version as the special version and make a separate browser terminal emulator later for free static hosting.
 
 The last option would look terminal-style in the browser, but it would not be the real SSH experience.
+
+https://fly.io/dashboard/yasamin-valishariatpanahi/activity

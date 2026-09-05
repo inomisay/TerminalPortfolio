@@ -61,6 +61,13 @@ const CONFIG = {
 
   projects: [
     {
+      name: 'Miora',
+      duration: '09/2026',
+      year: '2026',
+      tech: 'Digital Health · Medication Management',
+      desc: 'Full-stack medication assistant for regimen scheduling, smart stock depletion tracking, and real-time caregiver synchronization.',
+    },
+    {
       name: 'Budget Buddy',
       duration: '05/2026',
       year: '2026',
@@ -127,14 +134,14 @@ const CONFIG = {
 
   publications: [
     {
-      name: 'Hydroponic OPTICS',
-      duration: 'Under Revision',
+      name: 'A Two-Stage Unsupervised–Supervised Learning Framework Based on the OPTICS Clustering Algorithm for Monitoring Baby Sun Rose (Mesembryanthemum cordifolium) Plants in a Deep-Water Culture Hydroponic System Using Arduino Sensor Data',
+      duration: 'Ready to be Published',
       year: '2026',
       tech: 'Research Paper',
       desc: 'Research on automated hydroponic monitoring, control, and system optimization.',
     },
     {
-      name: 'Prompt Injection in LLM Agents',
+      name: 'Evaluating Prompt Injection Attacks and Multilayer Defense Mechanisms in Large Language Models: A Comparative Study of Local and Cloud-Based LLMs',
       duration: 'Manuscript in Preparation',
       year: '2026',
       tech: 'Security Research',
