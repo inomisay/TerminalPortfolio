@@ -61,6 +61,41 @@ const CONFIG = {
 
   projects: [
     {
+      name: 'Ryomen Sukuna',
+      duration: '10/2026',
+      year: '2026',
+      tech: 'GSAP · Interactive Fan Page',
+      desc: 'Cinematic single-page Jujutsu Kaisen tribute with six animated scenes navigated by keyboard, mouse wheel, or swipe.',
+    },
+    {
+      name: 'Fog Mirror',
+      duration: '10/2026',
+      year: '2026',
+      tech: 'Canvas · MediaPipe · Web Audio',
+      desc: 'Webcam mirror that fogs up when you breathe at it; pinch to draw on the fog and fist-swipe to wipe it, all running locally in the browser.',
+    },
+    {
+      name: 'Pip',
+      duration: '10/2026',
+      year: '2026',
+      tech: 'PyTorch · From-Scratch LLM · Virtual Pet',
+      desc: 'A 17M-parameter language model trained from scratch on children\'s stories, raised in a browser nursery where you feed it, teach it facts, and it reasons from them, fully offline.',
+    },
+    {
+      name: 'Sky Cat',
+      duration: '10/2026',
+      year: '2026',
+      tech: 'Canvas Game · PWA',
+      desc: 'Installable offline arcade game: hold to float a cat into the sky, let go to crash through rooftops, and chain combos to flatten whole towns.',
+    },
+    {
+      name: 'Aptora',
+      duration: '10/2026',
+      year: '2026',
+      tech: 'PropTech · Property & Residential Governance',
+      desc: 'Full-stack property platform centralizing multi-tier portfolios, role-based operations, real-time maintenance ticketing, and automated cloud backups.',
+    },
+    {
       name: 'Miora',
       duration: '09/2026',
       year: '2026',
