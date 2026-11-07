@@ -61,6 +61,27 @@ const CONFIG = {
 
   projects: [
     {
+      name: 'Tidy Tide',
+      duration: '11/2026',
+      year: '2026',
+      tech: 'Windows App · PowerShell · Open Source',
+      desc: 'Renames Windows-style "photo (12).jpg" files to plain numbers like "12.jpg", with a live preview, undo, optional leading zeros, and a right-click Send to entry. Never overwrites a file.',
+    },
+    {
+      name: 'Halora',
+      duration: '10/2026 - 11/2026',
+      year: '2026',
+      tech: 'C# · .NET 8 · FFmpeg · ImageMagick',
+      desc: 'Windows tray app for converting files without opening anything: drag a file, hold Shift, let go, and pick a format from a ring. Images, video, audio and PDF, all converted locally.',
+    },
+    {
+      name: 'CampusAI (CampusMate v2)',
+      duration: '10/2026',
+      year: '2026',
+      tech: 'Next.js · Supabase · RAG · LLM',
+      desc: 'Upgraded version of CampusMate: answers student questions about registration, rules, deadlines and campus services from university documents, citing the document and page, in many languages.',
+    },
+    {
       name: 'Ryomen Sukuna',
       duration: '10/2026',
       year: '2026',
@@ -170,17 +191,17 @@ const CONFIG = {
   publications: [
     {
       name: 'A Two-Stage Unsupervised–Supervised Learning Framework Based on the OPTICS Clustering Algorithm for Monitoring Baby Sun Rose (Mesembryanthemum cordifolium) Plants in a Deep-Water Culture Hydroponic System Using Arduino Sensor Data',
-      duration: 'Ready to be Published',
+      duration: 'Ready to be Published · DergiPark',
       year: '2026',
       tech: 'Research Paper',
       desc: 'Research on automated hydroponic monitoring, control, and system optimization.',
     },
     {
-      name: 'Evaluating Prompt Injection Attacks and Multilayer Defense Mechanisms in Large Language Models: A Comparative Study of Local and Cloud-Based LLMs',
-      duration: 'Manuscript in Preparation',
+      name: 'Evaluating Prompt Injection Attacks and System-Prompt Hardening in Large Language Models: A Comparative Study of Local and Cloud-Based LLMs',
+      duration: 'Submitted to IEEE Access',
       year: '2026',
       tech: 'Security Research',
-      desc: 'Analysis of prompt injection risks and defense strategies for LLM-powered systems.',
+      desc: 'Comparative evaluation of prompt injection attacks and system-prompt hardening across local and cloud-based LLMs.',
     },
     {
       name: 'NephroCareAI for Renal Risk Prediction',
