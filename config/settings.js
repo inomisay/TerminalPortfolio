@@ -61,6 +61,13 @@ const CONFIG = {
 
   projects: [
     {
+      name: 'Novamily',
+      duration: '11/2026',
+      year: '2026',
+      tech: 'React · TypeScript · Supabase · Offline-first',
+      desc: 'Family meal picker: everyone votes on breakfast, lunch or dinner from Persian and Turkish dishes, the winner goes into the weekly plan. Shared recipes, invite links per family member, offline sync, in Persian, Turkish and English.',
+    },
+    {
       name: 'Tidy Tide',
       duration: '11/2026',
       year: '2026',
